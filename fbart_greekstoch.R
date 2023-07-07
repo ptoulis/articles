@@ -1,14 +1,13 @@
 #' 7/5, Greek Stochastics Conference
 #' Fbart examples. Panos Toulis panos.toulis@chicagobooth.edu
 
-# Sharp test [0.17, 0.42]
 rm(list=ls())
 
-library(experimentr)
+library(experimentr) # dataset
 lynn$tip = lynn$tip/lynn$groupsize
 library(dplyr)
 
-NRANDS = 10000
+NRANDS = 10000 # number of randomizaton samples
 
 # create dataset.
 D = lynn %>% mutate(Y=tip, Z=crouch) %>% select(Y,Z)
